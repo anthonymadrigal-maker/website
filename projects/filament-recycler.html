@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>3D Print Filament Recycler — Anthony Madrigal</title>
-<meta name="description" content="A shredder-based system for turning failed 3D prints back into usable filament.">
+<meta name="description" content="In progress: a shredder and extruder for turning failed 3D prints back into usable filament.">
 <meta property="og:title" content="3D Print Filament Recycler — Anthony Madrigal">
-<meta property="og:description" content="A shredder-based system for turning failed 3D prints back into usable filament.">
+<meta property="og:description" content="In progress: a shredder and extruder for turning failed 3D prints back into usable filament.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316140f'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='800' font-size='28' text-anchor='middle' fill='%23f4f1ea'%3EAM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,10 +31,10 @@
       <div>
         <p class="crumbs mono reveal"><a href="../index.html#projects">← All projects</a></p>
         <h1 class="reveal">3D Print Filament Recycler</h1>
-        <p class="lede reveal">A shredder-based system for turning failed 3D prints back into usable filament.</p>
-        <div class="stats reveal"><div><b>—</b><span>add a stat</span></div><div><b>—</b><span>add a stat</span></div><div><b>—</b><span>add a stat</span></div></div>
+        <p class="lede reveal">In progress: a shredder and extruder for turning failed 3D prints back into usable filament.</p>
+        <div class="stats reveal"><div><b>WIP</b><span>in progress</span></div><div><b>2</b><span>stages: shred + extrude</span></div><div><b>CAD</b><span>SolidWorks</span></div></div>
       </div>
-      <div class="media reveal"><img src="../images/recycler/shredder.jpg" alt="3D Print Filament Recycler"></div>
+      <div class="media reveal"><img src="../images/recycler/shredder-built.jpg" alt="3D Print Filament Recycler"></div>
     </div>
     <div class="scroll-cue mono">The story</div>
   </section>
@@ -45,50 +45,93 @@
         <ol>
           <span class="progress" aria-hidden="true"></span>
         <li><a href="#why"><small>01</small>The idea</a></li>
-        <li><a href="#design"><small>02</small>Design &amp; CAD</a></li>
-        <li><a href="#build"><small>03</small>The build</a></li>
+        <li><a href="#concept"><small>02</small>Early concept</a></li>
+        <li><a href="#design"><small>03</small>Final design</a></li>
+        <li><a href="#parts"><small>04</small>Sourcing</a></li>
+        <li><a href="#build"><small>05</small>Fabrication</a></li>
+        <li><a href="#extruder"><small>06</small>Extrusion</a></li>
         </ol>
       </aside>
       <div>
         <section class="chapter" id="why">
           <p class="eyebrow mono reveal">Chapter 01 — Why</p>
           <h2 class="reveal">Failed prints shouldn't be trash.</h2>
-          <div class="todo reveal"><b>Write-up coming.</b> Why you built it and what problem it solves.</div>
+          <div class="todo reveal"><b>Write-up coming.</b> Why you started this project and what the full system should do — shred failed prints, then extrude them into new filament.</div>
+        </section>
+        <section class="chapter" id="concept">
+          <p class="eyebrow mono reveal">Chapter 02 — Early iterations</p>
+          <h2 class="reveal">The first version, part by part.</h2>
+          <div class="todo reveal"><b>Write-up coming.</b> What the first concept looked like and what you changed.</div>
+          <p class="gallery-label mono reveal">Assembly</p>
+<div class="gallery cad reveal">
+  <figure style="--r:1.328"><img src="../images/recycler/early-iso.jpg" alt="Isometric view" loading="lazy" decoding="async"><figcaption>Isometric view</figcaption></figure>
+  <figure style="--r:2.366"><img src="../images/recycler/early-front.jpg" alt="Front view" loading="lazy" decoding="async"><figcaption>Front view</figcaption></figure>
+  <figure style="--r:0.906"><img src="../images/recycler/early-top.jpg" alt="Top view" loading="lazy" decoding="async"><figcaption>Top view</figcaption></figure>
+  <figure style="--r:2.713"><img src="../images/recycler/early-right.jpg" alt="Right view" loading="lazy" decoding="async"><figcaption>Right view</figcaption></figure>
+</div>
+          <p class="gallery-label mono reveal">Parts</p>
+<div class="gallery cad reveal">
+  <figure style="--r:0.684"><img src="../images/recycler/early-blade.jpg" alt="Blade" loading="lazy" decoding="async"><figcaption>Blade</figcaption></figure>
+  <figure style="--r:0.72"><img src="../images/recycler/early-spacer.jpg" alt="Spacer" loading="lazy" decoding="async"><figcaption>Spacer</figcaption></figure>
+  <figure style="--r:0.586"><img src="../images/recycler/early-wall-quarter.jpg" alt="1/4&quot; wall" loading="lazy" decoding="async"><figcaption>1/4&quot; wall</figcaption></figure>
+  <figure style="--r:0.642"><img src="../images/recycler/early-wall-five-eighths.jpg" alt="5/8&quot; wall" loading="lazy" decoding="async"><figcaption>5/8&quot; wall</figcaption></figure>
+  <figure style="--r:1.79"><img src="../images/recycler/early-baseplate.jpg" alt="Base plate" loading="lazy" decoding="async"><figcaption>Base plate</figcaption></figure>
+</div>
         </section>
         <section class="chapter" id="design">
-          <p class="eyebrow mono reveal">Chapter 02 — Design</p>
-          <h2 class="reveal">Designing the shredder.</h2>
-          <div class="todo reveal"><b>Write-up coming.</b> How the shredder and extruder were designed.</div>
+          <p class="eyebrow mono reveal">Chapter 03 — Design</p>
+          <h2 class="reveal">The shredder in SolidWorks.</h2>
+          <div class="todo reveal"><b>Write-up coming.</b> Key design decisions — blade stack, drive, gearing, motor.</div>
 <div class="gallery cad reveal">
-  <figure style="--r:1.55"><img src="../images/recycler/cad-shredder.jpg" alt="Shredder assembly" loading="lazy" decoding="async"><figcaption>Shredder assembly</figcaption></figure>
-  <figure style="--r:1.328"><img src="../images/recycler/cad-shredder-2.jpg" alt="Shredder CAD" loading="lazy" decoding="async"><figcaption>Shredder CAD</figcaption></figure>
+  <figure style="--r:1.278"><img src="../images/recycler/cad-final.jpg" alt="Shredder assembly" loading="lazy" decoding="async"><figcaption>Shredder assembly</figcaption></figure>
+  <figure style="--r:1.55"><img src="../images/recycler/cad-shredder.jpg" alt="Shredder with motor" loading="lazy" decoding="async"><figcaption>Shredder with motor</figcaption></figure>
+</div>
+        </section>
+        <section class="chapter" id="parts">
+          <p class="eyebrow mono reveal">Chapter 04 — Sourcing</p>
+          <h2 class="reveal">Parts arrive.</h2>
+          <div class="todo reveal"><b>Write-up coming.</b> What you bought vs. made, and why.</div>
+<div class="gallery  reveal">
+  <figure style="--r:0.75"><img src="../images/recycler/parts-blades.jpg" alt="Shredder blades" loading="lazy" decoding="async"><figcaption>Shredder blades</figcaption></figure>
+  <figure style="--r:0.75"><img src="../images/recycler/parts-gears.jpg" alt="Gears and hardware" loading="lazy" decoding="async"><figcaption>Gears and hardware</figcaption></figure>
+  <figure style="--r:0.75"><img src="../images/recycler/parts-bearings.jpg" alt="Bearings" loading="lazy" decoding="async"><figcaption>Bearings</figcaption></figure>
+  <figure style="--r:1.333"><img src="../images/recycler/workspace.jpg" alt="Workspace" loading="lazy" decoding="async"><figcaption>Workspace</figcaption></figure>
 </div>
         </section>
         <section class="chapter" id="build">
-          <p class="eyebrow mono reveal">Chapter 03 — Build</p>
+          <p class="eyebrow mono reveal">Chapter 05 — Fabrication</p>
           <h2 class="reveal">Cutting, welding, assembling.</h2>
-          <div class="todo reveal"><b>Write-up coming.</b> How it was fabricated — laser cutting, welding, assembly.</div>
+          <div class="todo reveal"><b>Write-up coming.</b> How each part was made and put together.</div>
+          <p class="gallery-label mono reveal">Cutting</p>
 <div class="gallery  reveal">
+  <figure style="--r:0.75"><img src="../images/recycler/plywood-base.jpg" alt="Plywood base" loading="lazy" decoding="async"><figcaption>Plywood base</figcaption></figure>
   <figure style="--r:0.75"><img src="../images/recycler/laser-cut.jpg" alt="Laser cutting" loading="lazy" decoding="async"><figcaption>Laser cutting</figcaption></figure>
   <figure style="--r:0.563"><img src="../images/recycler/cut-parts.jpg" alt="Cut parts" loading="lazy" decoding="async"><figcaption>Cut parts</figcaption></figure>
-  <figure style="--r:0.75"><img src="../images/recycler/blade.jpg" alt="Shredder blade" loading="lazy" decoding="async"><figcaption>Shredder blade</figcaption></figure>
+  <figure style="--r:0.75"><img src="../images/recycler/spacer.jpg" alt="Spacer" loading="lazy" decoding="async"><figcaption>Spacer</figcaption></figure>
+  <figure style="--r:0.75"><img src="../images/recycler/keyed-part.jpg" alt="Keyed part" loading="lazy" decoding="async"><figcaption>Keyed part</figcaption></figure>
+</div>
+          <p class="gallery-label mono reveal">Welding &amp; assembly</p>
+<div class="gallery  reveal">
   <figure style="--r:0.75"><img src="../images/recycler/welding.jpg" alt="Welding" loading="lazy" decoding="async"><figcaption>Welding</figcaption></figure>
+  <figure style="--r:0.75"><img src="../images/recycler/assembly-plate.jpg" alt="Assembling the blade housing" loading="lazy" decoding="async"><figcaption>Assembling the blade housing</figcaption></figure>
+  <figure style="--r:0.75"><img src="../images/recycler/shredder-assembled.jpg" alt="Shredder assembled" loading="lazy" decoding="async"><figcaption>Shredder assembled</figcaption></figure>
+  <figure style="--r:0.562"><img src="../images/recycler/shredder-built.jpg" alt="Shredder with drive" loading="lazy" decoding="async"><figcaption>Shredder with drive</figcaption></figure>
+</div>
+        </section>
+        <section class="chapter" id="extruder">
+          <p class="eyebrow mono reveal">Chapter 06 — Next stage</p>
+          <h2 class="reveal">From shreds to filament.</h2>
+          <div class="todo reveal"><b>Write-up coming.</b> The extruder and spooling setup, and where the project stands now.</div>
+<div class="gallery  single reveal">
+  <figure style="--r:0.75"><img src="../images/recycler/extruder.jpg" alt="Extruder and spool" loading="lazy" decoding="async"><figcaption>Extruder and spool</figcaption></figure>
 </div>
         </section>
 
-      <section class="finale reveal" aria-label="Final result">
-        <img src="../images/recycler/shredder.jpg" alt="The shredder" loading="lazy">
-        <div class="body">
-          <p class="mono" style="color:var(--accent-2)">The result</p>
-          <h2>The result</h2>
-          <p>Write-up coming.</p>
-        </div>
-      </section>
       </div>
     </div>
 
     <a class="next" href="nerf-turret.html">
-      <div><p class="mono">Next project</p><h3>App-Controlled Nerf Turret</h3></div>
+      <div><p class="mono">Next project</p><h3>Arduino Nerf Turret</h3></div>
       <span class="circle" aria-hidden="true">→</span>
     </a>
   </div>

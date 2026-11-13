@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>App-Controlled Nerf Turret — Anthony Madrigal</title>
-<meta name="description" content="An Arduino-powered Nerf turret aimed and fired from a custom phone app.">
-<meta property="og:title" content="App-Controlled Nerf Turret — Anthony Madrigal">
-<meta property="og:description" content="An Arduino-powered Nerf turret aimed and fired from a custom phone app.">
+<title>Arduino Nerf Turret — Anthony Madrigal</title>
+<meta name="description" content="A high school build: a Bluetooth Nerf turret, aimed and fired from a phone app I made in MIT App Inventor.">
+<meta property="og:title" content="Arduino Nerf Turret — Anthony Madrigal">
+<meta property="og:description" content="A high school build: a Bluetooth Nerf turret, aimed and fired from a phone app I made in MIT App Inventor.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316140f'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='800' font-size='28' text-anchor='middle' fill='%23f4f1ea'%3EAM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,11 +30,11 @@
     <div class="wrap">
       <div>
         <p class="crumbs mono reveal"><a href="../index.html#projects">← All projects</a></p>
-        <h1 class="reveal">App-Controlled Nerf Turret</h1>
-        <p class="lede reveal">An Arduino-powered Nerf turret aimed and fired from a custom phone app.</p>
-        <div class="stats reveal"><div><b>—</b><span>add a stat</span></div><div><b>—</b><span>add a stat</span></div><div><b>—</b><span>add a stat</span></div></div>
+        <h1 class="reveal">Arduino Nerf Turret</h1>
+        <p class="lede reveal">A Bluetooth Nerf turret controlled from a phone app — designed in cardboard, wired on an Arduino, and programmed from scratch.</p>
+        <div class="stats reveal"><div><b>7/10</b><span>difficulty</span></div><div><b>9/10</b><span>fun</span></div><div><b>BT</b><span>phone control</span></div></div>
       </div>
-      <div class="media reveal"><img src="../images/turret/turret.jpg" alt="App-Controlled Nerf Turret"></div>
+      <div class="media reveal"><img src="../images/turret/turret.jpg" alt="Arduino Nerf Turret"></div>
     </div>
     <div class="scroll-cue mono">The story</div>
   </section>
@@ -45,43 +45,128 @@
         <ol>
           <span class="progress" aria-hidden="true"></span>
         <li><a href="#why"><small>01</small>The idea</a></li>
-        <li><a href="#design"><small>02</small>Drawing &amp; design</a></li>
-        <li><a href="#build"><small>03</small>Electronics &amp; app</a></li>
+        <li><a href="#design"><small>02</small>Design</a></li>
+        <li><a href="#problems"><small>03</small>Problems &amp; fixes</a></li>
+        <li><a href="#wiring"><small>04</small>Wiring</a></li>
+        <li><a href="#app"><small>05</small>The app</a></li>
+        <li><a href="#code"><small>06</small>Arduino code</a></li>
+        <li><a href="#learned"><small>07</small>What I learned</a></li>
         </ol>
       </aside>
       <div>
         <section class="chapter" id="why">
-          <p class="eyebrow mono reveal">Chapter 01 — Why</p>
-          <h2 class="reveal">Aim from your phone.</h2>
-          <div class="todo reveal"><b>Write-up coming.</b> What the turret does and why you built it.</div>
+          <p class="eyebrow mono reveal">Chapter 01 — Coming up with the idea</p>
+          <h2 class="reveal">The guide gave me a parts list. Nothing else.</h2>
+          <p class="text big reveal">I started from an online Nerf turret guide — but it was outdated, covered the bare minimum, and had no information on how to program it.</p>
+          <div class="text reveal" style="margin-top:2rem"><p>All it really provided was a materials list. Everything else — the mechanism, the wiring, the code and the app — I had to research and work out myself.</p></div>
         </section>
         <section class="chapter" id="design">
-          <p class="eyebrow mono reveal">Chapter 02 — Design</p>
-          <h2 class="reveal">From sketch to model.</h2>
-          <div class="todo reveal"><b>Write-up coming.</b> The design process.</div>
+          <p class="eyebrow mono reveal">Chapter 02 — Creation</p>
+          <h2 class="reveal">Planned on paper, built in cardboard.</h2>
+          <div class="split">
+            <div class="text reveal">
+              <p>Before building anything, I drew every part <strong>to scale</strong> so everything was planned out ahead of time — the base mount, the magazine, and the mounts for the DC motors, the continuous 360° servo and the 180° servo.</p>
+              <p>The prototype was built from cardboard, which kept it fast and cheap to iterate on — even if cardboard doesn't always come out as intended.</p>
+            </div>
+            <ol class="steps reveal">
+              <li><div><b>Spin up</b>Two DC motors spin in opposite directions to act as flywheels.</div></li>
+              <li><div><b>Feed</b>A servo pushes a dart from the magazine into the spinning motors.</div></li>
+              <li><div><b>Launch</b>The flywheels grip the dart and fire it out.</div></li>
+            </ol>
+          </div>
+          <p class="gallery-label mono reveal">Plans &amp; first parts</p>
 <div class="gallery  reveal">
-  <figure style="--r:1.781"><img src="../images/turret/drawing.jpg" alt="Drawing" loading="lazy" decoding="async"><figcaption>Drawing</figcaption></figure>
-  <figure style="--r:1.784"><img src="../images/turret/creation.jpg" alt="Creation" loading="lazy" decoding="async"><figcaption>Creation</figcaption></figure>
+  <figure style="--r:1.784"><img src="../images/turret/creation.jpg" alt="To-scale drawings and the planned model" loading="lazy" decoding="async"><figcaption>To-scale drawings and the planned model</figcaption></figure>
+  <figure style="--r:0.767"><img src="../images/turret/base.jpg" alt="Base" loading="lazy" decoding="async"><figcaption>Base</figcaption></figure>
+  <figure style="--r:0.75"><img src="../images/turret/mount.jpg" alt="Mount" loading="lazy" decoding="async"><figcaption>Mount</figcaption></figure>
+  <figure style="--r:0.769"><img src="../images/turret/magazine.jpg" alt="Magazine (before DC motors)" loading="lazy" decoding="async"><figcaption>Magazine (before DC motors)</figcaption></figure>
+  <figure style="--r:0.725"><img src="../images/turret/flywheels.jpg" alt="Servo feeding a dart into the flywheels" loading="lazy" decoding="async"><figcaption>Servo feeding a dart into the flywheels</figcaption></figure>
 </div>
         </section>
-        <section class="chapter" id="build">
-          <p class="eyebrow mono reveal">Chapter 03 — Build</p>
-          <h2 class="reveal">Wiring it up and writing the app.</h2>
-          <div class="todo reveal"><b>Write-up coming.</b> Electronics, Arduino code, and how the app talks to the turret.</div>
+        <section class="chapter" id="problems">
+          <p class="eyebrow mono reveal">Chapter 03 — Problems</p>
+          <h2 class="reveal">First version: it didn't work.</h2>
+          <div class="split">
+            <div class="reveal">
+              <p class="mono" style="color:var(--accent-2);margin-bottom:1rem">What went wrong</p>
+              <ol class="steps">
+                <li><div><b>Both servos on the same side</b>The layout put both servo motors next to each other.</div></li>
+                <li><div><b>Blocked pusher</b>The motor that pushes out the darts was physically blocked.</div></li>
+                <li><div><b>Weight &amp; stability</b>Poor weight distribution made the whole turret unstable.</div></li>
+              </ol>
+            </div>
+            <div class="reveal">
+              <p class="mono" style="color:var(--accent);margin-bottom:1rem">The fix</p>
+              <ol class="steps">
+                <li><div><b>Follow the arc</b>I redesigned the mount so it follows the arc of the magazine.</div></li>
+                <li><div><b>Supported</b>The new layout successfully supports the mechanism and clears the pusher.</div></li>
+              </ol>
+            </div>
+          </div>
 <div class="gallery  reveal">
-  <figure style="--r:1.778"><img src="../images/turret/breadboard.jpg" alt="Breadboard prototype" loading="lazy" decoding="async"><figcaption>Breadboard prototype</figcaption></figure>
-  <figure style="--r:1.779"><img src="../images/turret/app.jpg" alt="The final app" loading="lazy" decoding="async"><figcaption>The final app</figcaption></figure>
+  <figure style="--r:0.993"><img src="../images/turret/problem-2.jpg" alt="The blocked pusher" loading="lazy" decoding="async"><figcaption>The blocked pusher</figcaption></figure>
+  <figure style="--r:1.063"><img src="../images/turret/solution-1.jpg" alt="New piece cut to the magazine arc" loading="lazy" decoding="async"><figcaption>New piece cut to the magazine arc</figcaption></figure>
+  <figure style="--r:0.756"><img src="../images/turret/solution-2.jpg" alt="Redesigned mount" loading="lazy" decoding="async"><figcaption>Redesigned mount</figcaption></figure>
 </div>
+        </section>
+        <section class="chapter" id="wiring">
+          <p class="eyebrow mono reveal">Chapter 04 — Put together</p>
+          <h2 class="reveal">Wiring it up.</h2>
+          <div class="bom reveal">
+              <div><b>Servo motor</b><span>3 wires — two for the circuit, one for communication</span></div>
+              <div><b>DC motors</b><span>Power, speed and direction lines</span></div>
+              <div><b>Bluetooth module</b><span>5 wires — two for communication, two for the circuit</span></div>
+          </div>
+<div class="gallery  reveal">
+  <figure style="--r:2.017"><img src="../images/turret/wiring-diagram.jpg" alt="Wiring diagram" loading="lazy" decoding="async"><figcaption>Wiring diagram</figcaption></figure>
+  <figure style="--r:0.853"><img src="../images/turret/wiring.jpg" alt="Breadboard wiring" loading="lazy" decoding="async"><figcaption>Breadboard wiring</figcaption></figure>
+  <figure style="--r:0.726"><img src="../images/turret/put-together.jpg" alt="Put together" loading="lazy" decoding="async"><figcaption>Put together</figcaption></figure>
+  <figure style="--r:0.719"><img src="../images/turret/turret.jpg" alt="Electronics mounted" loading="lazy" decoding="async"><figcaption>Electronics mounted</figcaption></figure>
+</div>
+        </section>
+        <section class="chapter" id="app">
+          <p class="eyebrow mono reveal">Chapter 05 — Programming the app</p>
+          <h2 class="reveal">A phone app, built with blocks.</h2>
+          <div class="split">
+            <div class="text reveal">
+              <p>I built the controller app in <strong>MIT App Inventor</strong> using block code. It was easy to use, though getting the alignment and sizing right was a little difficult.</p>
+            </div>
+            <ol class="steps reveal">
+              <li><div><b>Connect</b>Lists available Bluetooth devices and connects to the turret.</div></li>
+              <li><div><b>Status</b>Updates on a timer and shows whether Bluetooth is connected.</div></li>
+              <li><div><b>Control</b>Sends strings that are converted to ASCII characters on button pushed, released and clicked.</div></li>
+            </ol>
+          </div>
+<div class="gallery  reveal">
+  <figure style="--r:2.015"><img src="../images/turret/app-designer.jpg" alt="The app in MIT App Inventor" loading="lazy" decoding="async"><figcaption>The app in MIT App Inventor</figcaption></figure>
+  <figure style="--r:1.769"><img src="../images/turret/app-blocks.jpg" alt="Bluetooth block code" loading="lazy" decoding="async"><figcaption>Bluetooth block code</figcaption></figure>
+</div>
+        </section>
+        <section class="chapter" id="code">
+          <p class="eyebrow mono reveal">Chapter 06 — Programming the Arduino</p>
+          <h2 class="reveal">Every movement at once.</h2>
+          <div class="text reveal">
+            <p>The Arduino side uses <strong>Servo.h</strong> for servo commands and <strong>SoftwareSerial.h</strong> to send bytes back and forth with the app. Pins and motor speeds are all set in variables at the top, so the whole program can be tuned from one place.</p>
+            <p>On startup it sets up every pin, opens serial communication and moves all the motors to their starting positions. In the loop, <code>Serial.available</code> checks for a link and <code>Serial.read</code> takes in commands. Each command flips a set of booleans, and because everything runs through independent <code>if</code> statements, the turret can make multiple movements simultaneously — stepping in 1° increments with microsecond delays.</p>
+          </div>
+        </section>
+        <section class="chapter" id="learned">
+          <p class="eyebrow mono reveal">Chapter 07 — Final thoughts</p>
+          <h2 class="reveal">Difficulty 7/10. Fun 9/10.</h2>
+          <div class="split">
+            <div class="text reveal">
+              <p>The hardest part was the design — there are so many factors to keep in mind, all while working in cardboard. The research was tedious, and sometimes there was no answer to find, so I had to use my best judgement.</p>
+              <p>The whole process was fun, especially the small wins: getting a motor to work, finishing each part, and figuring out fixes within my limitations. The best part is when everything finally comes together — which is also the worst part, because then there's nothing left to work on.</p>
+            </div>
+            <ol class="steps reveal">
+              <li><div><b>Circuits</b>Building circuits and working with DC and servo motors.</div></li>
+              <li><div><b>Power</b>Keeping components from being overloaded, and reading power resistors.</div></li>
+              <li><div><b>3D design &amp; apps</b>Designing parts virtually, and what it takes to make an app.</div></li>
+              <li><div><b>Research</b>Greatly improved research skills.</div></li>
+            </ol>
+          </div>
         </section>
 
-      <section class="finale reveal" aria-label="Final result">
-        <img src="../images/turret/turret.jpg" alt="The turret" loading="lazy">
-        <div class="body">
-          <p class="mono" style="color:var(--accent-2)">The result</p>
-          <h2>The result</h2>
-          <p>Write-up coming.</p>
-        </div>
-      </section>
       </div>
     </div>
 

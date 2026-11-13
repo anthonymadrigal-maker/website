@@ -109,7 +109,9 @@ const layoutGallery = (g) => {
   if (!W || !figs.length) return;
   const gap = parseFloat(getComputedStyle(g).columnGap) || 0;
   const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
-  const target = g.classList.contains('single') ? Infinity : (W < 600 ? 9 * rem : 15 * rem);
+  const single = g.classList.contains('single');
+  // A lone photo fills its column inside a two-column split, but is capped elsewhere
+  const target = single ? (g.closest('.split') ? Infinity : (W < 600 ? 22 * rem : 32 * rem)) : (W < 600 ? 9 * rem : 15 * rem);
   let row = [], sum = 0;
   const place = (items, h) => items.forEach(([f, r]) => { f.style.width = (r * h) + 'px'; });
   figs.forEach((f) => {

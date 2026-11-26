@@ -130,3 +130,23 @@ if (galleries.length && 'ResizeObserver' in window) {
   const ro = new ResizeObserver((entries) => entries.forEach((e) => layoutGallery(e.target)));
   galleries.forEach((g) => ro.observe(g));
 }
+
+// Reading-progress bar on project pages
+const bar = document.querySelector('.read-progress');
+if (bar) {
+  const prog = () => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = `scaleX(${max > 0 ? Math.min(1, scrollY / max) : 0})`;
+  };
+  window.addEventListener('scroll', prog, { passive: true });
+  window.addEventListener('resize', prog);
+  prog();
+}
+
+// Hide the pinned "scroll to read" cue once the reader starts scrolling (phones)
+const cue = document.querySelector('.story-cue');
+if (cue) {
+  const toggleCue = () => cue.classList.toggle('gone', scrollY > 120);
+  window.addEventListener('scroll', toggleCue, { passive: true });
+  toggleCue();
+}

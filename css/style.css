@@ -357,3 +357,45 @@ p { margin: 0 0 1em; }
 /* When JavaScript lays the gallery out, it sets each photo's exact width */
 .gallery.js::after { display: none; }
 .gallery.js figure { flex: none; max-width: none; }
+
+/* --- Clickable logos ----------------------------------------------------- */
+.logos .logo-link { display: block; background: var(--paper); text-decoration: none; color: inherit; }
+.logos .logo-link figure { height: 100%; transition: background .25s; }
+.logos .logo-link:hover figure, .logos .logo-link:focus-visible figure { background: var(--paper-2); }
+.logos .logo-link:hover img { filter: none; opacity: 1; }
+.logos .logo-link:hover .wordmark { color: var(--ink); }
+.logos .logo-link:hover figcaption { color: var(--ink); }
+.logos .ext { display: inline-block; opacity: 0; transform: translate(-.2rem, .2rem); transition: opacity .25s, transform .25s; }
+.logos .logo-link:hover .ext, .logos .logo-link:focus-visible .ext { opacity: 1; transform: none; }
+@media (hover: none) { .logos .ext { opacity: .7; transform: none; } }
+
+/* --- "Scroll to read the story" cue on project pages --------------------- */
+.p-hero { min-height: 94vh; }
+.story-cue {
+  position: absolute; left: 50%; bottom: 2rem; transform: translateX(-50%); z-index: 2;
+  display: inline-flex; align-items: center; gap: .9rem;
+  padding: .85rem .85rem .85rem 1.5rem; border-radius: 999px;
+  background: var(--on-dark); color: var(--dark); text-decoration: none;
+  font-weight: 600; font-size: 1rem; box-shadow: 0 1rem 2.5rem -1rem rgba(0,0,0,.6);
+  transition: background .2s, color .2s;
+}
+.story-cue .chev {
+  width: 2.2rem; height: 2.2rem; border-radius: 50%; display: grid; place-items: center;
+  background: var(--accent); color: var(--on-dark); font-size: 1.1rem;
+  animation: bob 1.6s ease-in-out infinite;
+}
+.story-cue:hover { background: var(--accent-2); color: var(--on-dark); }
+.story-cue:hover .chev { background: var(--dark); }
+@keyframes bob { 0%, 100% { transform: translateY(-.15rem); } 50% { transform: translateY(.3rem); } }
+
+/* Thin reading-progress bar along the top of project pages */
+.read-progress { position: fixed; top: 0; left: 0; height: 3px; width: 100%; z-index: 60; background: var(--accent-2); transform-origin: 0 50%; transform: scaleX(0); }
+
+@media (prefers-reduced-motion: reduce) { .story-cue .chev { animation: none; } }
+@media (max-width: 900px) {
+  .p-hero { min-height: auto; }
+  .p-hero .wrap { padding-bottom: 6.5rem; }
+  /* On phones the hero is taller than the screen, so pin the cue to the bottom of the screen */
+  .story-cue { position: fixed; bottom: 1.25rem; font-size: .95rem; white-space: nowrap; transition: opacity .3s, transform .3s, background .2s; }
+  .story-cue.gone { opacity: 0; transform: translate(-50%, 1rem); pointer-events: none; }
+}

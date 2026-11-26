@@ -107,14 +107,26 @@ def build_home():
         </div>
         <div class="thumb"><img src="{pr['cover']}" alt="{E(pr['title'])}" loading="lazy"></div>
       </a>''')
-    logos = [('deepshard', 'Deepshard Inc.'), ('idea-center', 'IDEA Center'), ('evolvent-design', 'Evolvent Design'), ('navfac-exwc', 'NAVFAC EXWC'),
-             ('usc-arc', 'USC ARC'), ('terra-labs', 'Terra Labs'), ('usc', 'USC'),
-             ('oxnard-college', 'Oxnard College'), ('namru-sa', 'NAMRU San Antonio')]
-    # f=None means no logo file yet: show the name as a plain wordmark instead
-    logo_html = '\n'.join(
-        (f'        <figure><img src="images/logos/{f}.png" alt="{E(n)} logo" loading="lazy"><figcaption class="mono">{E(n)}</figcaption></figure>' if f else
-         f'        <figure><span class="wordmark">{E(n.replace(" Inc.", ""))}</span><figcaption class="mono">{E(n)}</figcaption></figure>')
-        for f, n in logos)
+    # (logo file, name, website). Logos with a website open it in a new tab.
+    logos = [('deepshard', 'Deepshard Inc.', 'https://itsalltruffles.com'),
+             ('idea-center', 'IDEA Center', None),
+             ('evolvent-design', 'Evolvent Design', None),
+             ('navfac-exwc', 'NAVFAC EXWC', 'https://www.navfac.navy.mil'),
+             ('usc-arc', 'USC ARC', None),
+             ('terra-labs', 'Terra Labs', None),
+             ('usc', 'USC', 'https://www.usc.edu'),
+             ('oxnard-college', 'Oxnard College', 'https://www.oxnardcollege.edu'),
+             ('namru-sa', 'NAMRU San Antonio', None)]
+    def logo_item(f, n, url):
+        # Linked logos get empty alt text because the link's aria-label already names them
+        alt = '' if url else f'{E(n)} logo'
+        mark = (f'<img src="images/logos/{f}.png" alt="{alt}" loading="lazy">' if f
+                else f'<span class="wordmark">{E(n.replace(" Inc.", ""))}</span>')
+        if url:
+            return (f'        <a class="logo-link" href="{E(url)}" target="_blank" rel="noopener" aria-label="{E(n)} website (opens in a new tab)">'
+                    f'<figure>{mark}<figcaption class="mono">{E(n)} <span class="ext" aria-hidden="true">↗</span></figcaption></figure></a>')
+        return f'        <figure>{mark}<figcaption class="mono">{E(n)}</figcaption></figure>'
+    logo_html = '\n'.join(logo_item(*l) for l in logos)
 
     page = head('Anthony Madrigal | Engineering Portfolio',
                 'Engineering student at USC. Projects in mechanical design, electronics and rapid prototyping.', p)
@@ -211,7 +223,7 @@ def build_project(pr, hero_img, lede, stats, chapters, finale, nxt):
         </div>
       </section>'''
     page = head(f"{pr['title']} | Anthony Madrigal", pr['blurb'], p)
-    page += '<body id="top">\n' + header(p, 'projects', dark=True) + f'''
+    page += '<body id="top" class="project">\n<div class="read-progress" aria-hidden="true"></div>\n' + header(p, 'projects', dark=True) + f'''
 <main>
   <section class="p-hero">
     <div class="wrap">
@@ -223,7 +235,7 @@ def build_project(pr, hero_img, lede, stats, chapters, finale, nxt):
       </div>
       <div class="media reveal"><img src="{p}{hero_img}" alt="{E(pr['title'])}"></div>
     </div>
-    <div class="scroll-cue mono">The story</div>
+    <a class="story-cue" href="#{chapters[0]['id']}"><span>Scroll to read the full story</span><span class="chev" aria-hidden="true">↓</span></a>
   </section>
 
   <div class="wrap">

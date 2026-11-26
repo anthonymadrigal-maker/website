@@ -110,8 +110,8 @@ def build_home():
     # (logo file, name, website). Logos with a website open it in a new tab.
     logos = [('deepshard', 'Deepshard Inc.', 'https://itsalltruffles.com'),
              ('idea-center', 'IDEA Center', None),
-             ('evolvent-design', 'Evolvent Design', None),
-             ('navfac-exwc', 'NAVFAC EXWC', 'https://www.navfac.navy.mil'),
+             ('evolvent-design', 'Evolvent Design', 'https://evolventdesign.com'),
+             ('navfac-exwc', 'NAVFAC EXWC', 'https://exwc.navfac.navy.mil'),
              ('usc-arc', 'USC ARC', None),
              ('terra-labs', 'Terra Labs', None),
              ('usc', 'USC', 'https://www.usc.edu'),

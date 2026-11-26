@@ -107,10 +107,14 @@ def build_home():
         </div>
         <div class="thumb"><img src="{pr['cover']}" alt="{E(pr['title'])}" loading="lazy"></div>
       </a>''')
-    logos = [('idea-center', 'IDEA Center'), ('evolvent-design', 'Evolvent Design'), ('navfac-exwc', 'NAVFAC EXWC'),
+    logos = [(None, 'Deepshard Inc.'), ('idea-center', 'IDEA Center'), ('evolvent-design', 'Evolvent Design'), ('navfac-exwc', 'NAVFAC EXWC'),
              ('usc-arc', 'USC ARC'), ('terra-labs', 'Terra Labs'), ('usc', 'USC'),
              ('oxnard-college', 'Oxnard College'), ('namru-sa', 'NAMRU San Antonio')]
-    logo_html = '\n'.join(f'        <figure><img src="images/logos/{f}.png" alt="{E(n)} logo" loading="lazy"><figcaption class="mono">{E(n)}</figcaption></figure>' for f, n in logos)
+    # f=None means no logo file yet: show the name as a plain wordmark instead
+    logo_html = '\n'.join(
+        (f'        <figure><img src="images/logos/{f}.png" alt="{E(n)} logo" loading="lazy"><figcaption class="mono">{E(n)}</figcaption></figure>' if f else
+         f'        <figure><span class="wordmark">{E(n.replace(" Inc.", ""))}</span><figcaption class="mono">{E(n)}</figcaption></figure>')
+        for f, n in logos)
 
     page = head('Anthony Madrigal — Engineering Portfolio',
                 'Engineering student at USC. Projects in mechanical design, electronics and rapid prototyping.', p)

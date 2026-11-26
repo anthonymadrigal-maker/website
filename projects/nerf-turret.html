@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Arduino Nerf Turret — Anthony Madrigal</title>
-<meta name="description" content="A high school build: a Bluetooth Nerf turret, aimed and fired from a phone app I made in MIT App Inventor.">
-<meta property="og:title" content="Arduino Nerf Turret — Anthony Madrigal">
-<meta property="og:description" content="A high school build: a Bluetooth Nerf turret, aimed and fired from a phone app I made in MIT App Inventor.">
+<title>Arduino Nerf Turret | Anthony Madrigal</title>
+<meta name="description" content="A high school build. A Bluetooth Nerf turret, aimed and fired from a phone app I made in MIT App Inventor.">
+<meta property="og:title" content="Arduino Nerf Turret | Anthony Madrigal">
+<meta property="og:description" content="A high school build. A Bluetooth Nerf turret, aimed and fired from a phone app I made in MIT App Inventor.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316140f'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='800' font-size='28' text-anchor='middle' fill='%23f4f1ea'%3EAM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
       <div>
         <p class="crumbs mono reveal"><a href="../index.html#projects">← All projects</a></p>
         <h1 class="reveal">Arduino Nerf Turret</h1>
-        <p class="lede reveal">A Bluetooth Nerf turret controlled from a phone app — designed in cardboard, wired on an Arduino, and programmed from scratch.</p>
+        <p class="lede reveal">A Bluetooth Nerf turret controlled from a phone app. Designed in cardboard, wired on an Arduino, and programmed from scratch.</p>
         <div class="stats reveal"><div><b>7/10</b><span>difficulty</span></div><div><b>9/10</b><span>fun</span></div><div><b>BT</b><span>phone control</span></div></div>
       </div>
       <div class="media reveal"><img src="../images/turret/turret.jpg" alt="Arduino Nerf Turret"></div>
@@ -55,18 +55,18 @@
       </aside>
       <div>
         <section class="chapter" id="why">
-          <p class="eyebrow mono reveal">Chapter 01 — Coming up with the idea</p>
+          <p class="eyebrow mono reveal">Chapter 01 · Coming up with the idea</p>
           <h2 class="reveal">The guide gave me a parts list. Nothing else.</h2>
-          <p class="text big reveal">I started from an online Nerf turret guide — but it was outdated, covered the bare minimum, and had no information on how to program it.</p>
-          <div class="text reveal" style="margin-top:2rem"><p>All it really provided was a materials list. Everything else — the mechanism, the wiring, the code and the app — I had to research and work out myself.</p></div>
+          <p class="text big reveal">I started from an online Nerf turret guide, but it was outdated, covered the bare minimum, and had no information on how to program it.</p>
+          <div class="text reveal" style="margin-top:2rem"><p>All it really provided was a materials list. The mechanism, the wiring, the code and the app were all things I had to research and work out myself.</p></div>
         </section>
         <section class="chapter" id="design">
-          <p class="eyebrow mono reveal">Chapter 02 — Creation</p>
+          <p class="eyebrow mono reveal">Chapter 02 · Creation</p>
           <h2 class="reveal">Planned on paper, built in cardboard.</h2>
           <div class="split">
             <div class="text reveal">
-              <p>Before building anything, I drew every part <strong>to scale</strong> so everything was planned out ahead of time — the base mount, the magazine, and the mounts for the DC motors, the continuous 360° servo and the 180° servo.</p>
-              <p>The prototype was built from cardboard, which kept it fast and cheap to iterate on — even if cardboard doesn't always come out as intended.</p>
+              <p>Before building anything, I drew every part <strong>to scale</strong> so everything was planned out ahead of time, including the base mount, the magazine, and the mounts for the DC motors, the continuous 360° servo and the 180° servo.</p>
+              <p>The prototype was built from cardboard, which kept it fast and cheap to iterate on, even if cardboard doesn't always come out as intended.</p>
             </div>
             <ol class="steps reveal">
               <li><div><b>Spin up</b>Two DC motors spin in opposite directions to act as flywheels.</div></li>
@@ -84,8 +84,8 @@
 </div>
         </section>
         <section class="chapter" id="problems">
-          <p class="eyebrow mono reveal">Chapter 03 — Problems</p>
-          <h2 class="reveal">First version: it didn't work.</h2>
+          <p class="eyebrow mono reveal">Chapter 03 · Problems</p>
+          <h2 class="reveal">The first version didn't work.</h2>
           <div class="split">
             <div class="reveal">
               <p class="mono" style="color:var(--accent-2);margin-bottom:1rem">What went wrong</p>
@@ -110,12 +110,12 @@
 </div>
         </section>
         <section class="chapter" id="wiring">
-          <p class="eyebrow mono reveal">Chapter 04 — Put together</p>
+          <p class="eyebrow mono reveal">Chapter 04 · Put together</p>
           <h2 class="reveal">Wiring it up.</h2>
           <div class="bom reveal">
-              <div><b>Servo motor</b><span>3 wires — two for the circuit, one for communication</span></div>
+              <div><b>Servo motor</b><span>3 wires, two for the circuit and one for communication</span></div>
               <div><b>DC motors</b><span>Power, speed and direction lines</span></div>
-              <div><b>Bluetooth module</b><span>5 wires — two for communication, two for the circuit</span></div>
+              <div><b>Bluetooth module</b><span>5 wires, two for communication and two for the circuit</span></div>
           </div>
 <div class="gallery  reveal">
   <figure style="--r:2.017"><img src="../images/turret/wiring-diagram.jpg" alt="Wiring diagram" loading="lazy" decoding="async"><figcaption>Wiring diagram</figcaption></figure>
@@ -125,7 +125,7 @@
 </div>
         </section>
         <section class="chapter" id="app">
-          <p class="eyebrow mono reveal">Chapter 05 — Programming the app</p>
+          <p class="eyebrow mono reveal">Chapter 05 · Programming the app</p>
           <h2 class="reveal">A phone app, built with blocks.</h2>
           <div class="split">
             <div class="text reveal">
@@ -143,20 +143,20 @@
 </div>
         </section>
         <section class="chapter" id="code">
-          <p class="eyebrow mono reveal">Chapter 06 — Programming the Arduino</p>
+          <p class="eyebrow mono reveal">Chapter 06 · Programming the Arduino</p>
           <h2 class="reveal">Every movement at once.</h2>
           <div class="text reveal">
             <p>The Arduino side uses <strong>Servo.h</strong> for servo commands and <strong>SoftwareSerial.h</strong> to send bytes back and forth with the app. Pins and motor speeds are all set in variables at the top, so the whole program can be tuned from one place.</p>
-            <p>On startup it sets up every pin, opens serial communication and moves all the motors to their starting positions. In the loop, <code>Serial.available</code> checks for a link and <code>Serial.read</code> takes in commands. Each command flips a set of booleans, and because everything runs through independent <code>if</code> statements, the turret can make multiple movements simultaneously — stepping in 1° increments with microsecond delays.</p>
+            <p>On startup it sets up every pin, opens serial communication and moves all the motors to their starting positions. In the loop, <code>Serial.available</code> checks for a link and <code>Serial.read</code> takes in commands. Each command flips a set of booleans, and because everything runs through independent <code>if</code> statements, the turret can make multiple movements simultaneously, stepping in 1° increments with microsecond delays.</p>
           </div>
         </section>
         <section class="chapter" id="learned">
-          <p class="eyebrow mono reveal">Chapter 07 — Final thoughts</p>
+          <p class="eyebrow mono reveal">Chapter 07 · Final thoughts</p>
           <h2 class="reveal">Difficulty 7/10. Fun 9/10.</h2>
           <div class="split">
             <div class="text reveal">
-              <p>The hardest part was the design — there are so many factors to keep in mind, all while working in cardboard. The research was tedious, and sometimes there was no answer to find, so I had to use my best judgement.</p>
-              <p>The whole process was fun, especially the small wins: getting a motor to work, finishing each part, and figuring out fixes within my limitations. The best part is when everything finally comes together — which is also the worst part, because then there's nothing left to work on.</p>
+              <p>The hardest part was the design because there are so many factors to keep in mind, all while working in cardboard. The research was tedious, and sometimes there was no answer to find, so I had to use my best judgement.</p>
+              <p>The whole process was fun, especially the small wins like getting a motor to work, finishing each part, and figuring out fixes within my limitations. The best part is when everything finally comes together, which is also the worst part, because then there's nothing left to work on.</p>
             </div>
             <ol class="steps reveal">
               <li><div><b>Circuits</b>Building circuits and working with DC and servo motors.</div></li>
@@ -180,7 +180,7 @@
   <div class="wrap">
     <p class="mono" style="color:var(--on-dark-2)">Contact</p>
     <h2 class="reveal">Let's build<br>something <em>real.</em></h2>
-    <p class="lede reveal">Questions about a project, internships, or anything else — I'd love to hear from you.</p>
+    <p class="lede reveal">Questions about a project, internships, or anything else? I'd love to hear from you.</p>
     <div class="links reveal">
       <a class="btn" href="mailto:anthony.madrigal@usc.edu">anthony.madrigal@usc.edu <span class="arrow">→</span></a>
       <a class="btn ghost" href="https://www.linkedin.com/in/madrigalanthony" target="_blank" rel="noopener">LinkedIn ↗</a>

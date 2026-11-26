@@ -45,7 +45,7 @@ def contact(prefix):
   <div class="wrap">
     <p class="mono" style="color:var(--on-dark-2)">Contact</p>
     <h2 class="reveal">Let's build<br>something <em>real.</em></h2>
-    <p class="lede reveal">Questions about a project, internships, or anything else — I'd love to hear from you.</p>
+    <p class="lede reveal">Questions about a project, internships, or anything else? I'd love to hear from you.</p>
     <div class="links reveal">
       <a class="btn" href="mailto:anthony.madrigal@usc.edu">anthony.madrigal@usc.edu <span class="arrow">→</span></a>
       <a class="btn ghost" href="https://www.linkedin.com/in/madrigalanthony" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -77,15 +77,15 @@ def gallery(items, prefix, cls=''):
 PROJECTS = [
     dict(slug='dr-pepper-can', title='Automated Dr. Pepper Can', short='43" Self-Opening Soda Can',
          cover='images/can/final.jpg',
-         blurb='A 43-inch tall, self-opening Dr. Pepper can — designed, wired, coded, fabricated and filmed in 20 days for a scholarship application.',
+         blurb='A 43-inch tall, self-opening Dr. Pepper can that I designed, wired, coded, built and filmed in 20 days for a scholarship application.',
          tags=['SolidWorks', 'Arduino', '3D printing', 'Laser cutting']),
     dict(slug='filament-recycler', title='3D Print Filament Recycler', short='3D Print Recycler',
          cover='images/recycler/shredder-assembled.jpg',
-         blurb='The project that started it all: a machine to recycle failed 3D prints, designed from scratch and now carried on by the STEMbassadors makerspace.',
+         blurb='The project that started it all. A machine to recycle failed 3D prints, designed from scratch and now carried on by the STEMbassadors makerspace.',
          tags=['SolidWorks', 'Fiber laser', 'Design for manufacturing']),
     dict(slug='nerf-turret', title='Arduino Nerf Turret', short='Arduino Nerf Turret',
          cover='images/turret/turret.jpg',
-         blurb='A high school build: a Bluetooth Nerf turret, aimed and fired from a phone app I made in MIT App Inventor.',
+         blurb='A high school build. A Bluetooth Nerf turret, aimed and fired from a phone app I made in MIT App Inventor.',
          tags=['Arduino', 'Bluetooth', 'MIT App Inventor', 'Prototyping']),
 ]
 
@@ -116,7 +116,7 @@ def build_home():
          f'        <figure><span class="wordmark">{E(n.replace(" Inc.", ""))}</span><figcaption class="mono">{E(n)}</figcaption></figure>')
         for f, n in logos)
 
-    page = head('Anthony Madrigal — Engineering Portfolio',
+    page = head('Anthony Madrigal | Engineering Portfolio',
                 'Engineering student at USC. Projects in mechanical design, electronics and rapid prototyping.', p)
     page += '<body id="top">\n' + header(p, 'home') + f'''
 <main>
@@ -125,7 +125,7 @@ def build_home():
       <div>
         <p class="kicker mono reveal">Engineering student · USC</p>
         <h1 class="reveal">Anthony<span>Madrigal</span></h1>
-        <p class="lede reveal">I design, build and code physical things — from CAD to the final bolt. Each project here is told as a story: the idea, the build, and what came out the other side.</p>
+        <p class="lede reveal">I design, build and code physical things, from CAD to the final bolt. Each project here is told as a story, starting with the idea and following it through the build to what came out the other side.</p>
         <div class="actions reveal">
           <a class="btn" href="#projects">See the projects <span class="arrow">↓</span></a>
           <a class="btn ghost" href="#contact">Get in touch</a>
@@ -173,7 +173,7 @@ def build_home():
 
   <section class="band" aria-label="Workbench">
     <img src="images/home/workbench.jpg" alt="" loading="lazy">
-    <div class="wrap"><blockquote class="reveal">Years in a makerspace taught me one thing: the fastest way to learn is to build it.</blockquote></div>
+    <div class="wrap"><blockquote class="reveal">Years in a makerspace taught me that the fastest way to learn something is to build it.</blockquote></div>
   </section>
 
   <section class="section" id="experience">
@@ -210,7 +210,7 @@ def build_project(pr, hero_img, lede, stats, chapters, finale, nxt):
           <p>{finale['text']}</p>
         </div>
       </section>'''
-    page = head(f"{pr['title']} — Anthony Madrigal", pr['blurb'], p)
+    page = head(f"{pr['title']} | Anthony Madrigal", pr['blurb'], p)
     page += '<body id="top">\n' + header(p, 'projects', dark=True) + f'''
 <main>
   <section class="p-hero">
@@ -261,41 +261,41 @@ P = '../'
 
 # --- Dr Pepper can ---------------------------------------------------------
 can_chapters = [
-    chapter('why', 'The challenge', 'Chapter 01 — Why', 'A scholarship, a soda can, and 20 days.', f'''          <p class="text big reveal">As part of a scholarship application I made a 43-inch tall, self-opening Dr. Pepper can.</p>
+    chapter('why', 'The challenge', 'Chapter 01 · Why', 'A scholarship, a soda can, and 20 days.', f'''          <p class="text big reveal">As part of a scholarship application I made a 43-inch tall, self-opening Dr. Pepper can.</p>
           <div class="split" style="margin-top:2.5rem">
             <div class="text reveal">
-              <p>Thanks to years I dedicated at a makerspace independently learning, rapidly prototyping and helping others start projects from scratch, I completed the project ideation, CAD, coding, wiring, fabrication, sourcing of materials and components, assembly and cosmetics — all within <strong>20 days</strong>.</p>
-              <p>My initial idea was a fully refrigerated custom unit, but with 20 days on the line I had to make sure I had an MVP for my video — especially since you can't tell temperature from a video.</p>
+              <p>Thanks to years I dedicated at a makerspace independently learning, rapidly prototyping and helping others start projects from scratch, I completed the project ideation, CAD, coding, wiring, fabrication, sourcing of materials and components, assembly and cosmetics all within <strong>20 days</strong>.</p>
+              <p>My initial idea was a fully refrigerated custom unit, but with 20 days on the line I had to make sure I had an MVP for my video, especially since you can't tell temperature from a video.</p>
             </div>
 {gallery([('images/can/scale.jpg', 'For scale')], P)}
           </div>'''),
-    chapter('how', 'How it works', 'Chapter 02 — How it works', 'Press the tab. The can does the rest.', f'''          <div class="split">
+    chapter('how', 'How it works', 'Chapter 02 · How it works', 'Press the tab. The can does the rest.', f'''          <div class="split">
             <ol class="steps reveal">
               <li><div><b>Press the pull tab</b>Pressing the tab down clicks a limit switch, placed where a pushed-down tab would normally touch the lid.</div></li>
               <li><div><b>The servo opens the can</b>A servo mounted under the lid, with two arms linked to the opening tab, slowly pulls it open.</div></li>
-              <li><div><b>The tab follows along</b>An elastic connector joins the pull tab to the opening tab, and the pull tab is hinged at the opening's edge — so it moves with it, just like a real can opening itself.</div></li>
+              <li><div><b>The tab follows along</b>An elastic connector joins the pull tab to the opening tab, and the pull tab is hinged at the opening's edge, so it moves with it just like a real can opening itself.</div></li>
               <li><div><b>The elevator rises</b>Once the servo reaches a set angle, an internal rack-and-pinion elevator driven by a DC motor lifts a can up and out of the opening.</div></li>
-              <li><div><b>Reset</b>After a few seconds it lowers until it hits a second limit switch — only then does the servo return to its starting position.</div></li>
+              <li><div><b>Reset</b>After a few seconds it lowers until it hits a second limit switch. Only then does the servo return to its starting position.</div></li>
             </ol>
             <div class="sticky">
 {gallery([('images/can/inside.jpg', 'Looking down into the mechanism')], P)}
             </div>
           </div>'''),
-    chapter('video', 'The video', 'Chapter 03 — Video submission', 'See it in action.', f'''          <div class="video reveal">
+    chapter('video', 'The video', 'Chapter 03 · Video submission', 'See it in action.', f'''          <div class="video reveal">
             <button type="button" data-yt="c0I0LvTEppc" aria-label="Play the Dr. Pepper can video submission">
               <img src="{P}images/can/video-poster.jpg" alt="" loading="lazy">
               <span class="play" aria-hidden="true"></span>
             </button>
           </div>
           <p class="mono reveal" style="margin-top:1rem;color:var(--ink-3)"><a href="https://youtu.be/c0I0LvTEppc" target="_blank" rel="noopener">Watch on YouTube ↗</a></p>'''),
-    chapter('planning', 'Planning & CAD', 'Chapter 04 — Planning', 'Measuring a real can, then modeling every part.', f'''          <div class="text reveal"><p>The first step was to take measurements from a real can and begin to model each part in SolidWorks — the lid and its mechanism, the shoulders, the laser-cut frame, and the brackets holding the motors.</p></div>
+    chapter('planning', 'Planning & CAD', 'Chapter 04 · Planning', 'Measuring a real can, then modeling every part.', f'''          <div class="text reveal"><p>The first step was to take measurements from a real can and begin to model each part in SolidWorks, including the lid and its mechanism, the shoulders, the laser-cut frame, and the brackets holding the motors.</p></div>
 {gallery([('images/can/modeling.jpg', 'Modeling in SolidWorks'), ('images/can/cad-assembly.jpg', 'Frame assembly')], P)}
           <p class="gallery-label mono reveal">The lid</p>
 {gallery([('images/can/cad-lid.jpg', 'Lid'), ('images/can/cad-lid-top.jpg', 'Lid, top'), ('images/can/cad-lid-opening.jpg', 'Lid opening'), ('images/can/cad-lid-underside.jpg', 'Lid underside mounts')], P, 'cad')}
           <p class="gallery-label mono reveal">Frame &amp; mechanism</p>
 {gallery([('images/can/cad-frame.jpg', 'Frame'), ('images/can/cad-shoulder.jpg', 'Shoulder section'), ('images/can/cad-ring.jpg', 'Interlocking ring'), ('images/can/cad-rib.jpg', 'Rib'), ('images/can/cad-rod.jpg', 'Rod'), ('images/can/cad-servo-arm.jpg', 'Servo arm'), ('images/can/cad-bracket.jpg', 'Motor bracket')], P, 'cad')}'''),
-    chapter('manufacturing', 'Manufacturing', 'Chapter 05 — Manufacturing', 'Print, putty, sand, paint. Repeat.', f'''          <div class="text reveal">
-            <p>The complex geometry was 3D printed — namely the lid, shoulders and the bottom. To get rid of layer lines, red automotive putty was applied to the seams formed by gluing the printed parts together. The putty was then sanded down and sprayed with silver reflective spray paint.</p>
+    chapter('manufacturing', 'Manufacturing', 'Chapter 05 · Manufacturing', 'Print, putty, sand, paint. Repeat.', f'''          <div class="text reveal">
+            <p>The complex geometry was 3D printed, namely the lid, shoulders and the bottom. To get rid of layer lines, red automotive putty was applied to the seams formed by gluing the printed parts together. The putty was then sanded down and sprayed with silver reflective spray paint.</p>
             <p>The frame of the can was made out of ¼" plywood that I cut on a CO₂ laser, with rings and ribs designed to interlock with each other.</p>
           </div>
           <p class="gallery-label mono reveal">The lid</p>
@@ -304,9 +304,9 @@ can_chapters = [
 {gallery([('images/can/sanding-station.jpg', 'Outdoor sanding and painting station'), ('images/can/respirator.jpg', 'Suited up for spray paint')], P)}
           <p class="gallery-label mono reveal">The frame</p>
 {gallery([('images/can/laser-ring.jpg', 'Laser-cut ring'), ('images/can/frame.jpg', 'Interlocking plywood frame'), ('images/can/frame-lid.jpg', 'Frame with lid'), ('images/can/frame-inside.jpg', 'Inside the frame'), ('images/can/wrapping-body.jpg', 'Fitting the sheet-metal body'), ('images/can/wrapped.jpg', 'Wrapping the body')], P)}'''),
-    chapter('electronics', 'Electronics & code', 'Chapter 06 — Electronics, code & video', 'Built to survive a power cut.', f'''          <div class="split">
+    chapter('electronics', 'Electronics & code', 'Chapter 06 · Electronics, code & video', 'Built to survive a power cut.', f'''          <div class="split">
             <div class="text reveal">
-              <p>The code was written so the entire system could be powered off at any point — it resets itself as soon as the Arduino receives power again.</p>
+              <p>The code was written so the entire system could be powered off at any point and it resets itself as soon as the Arduino receives power again.</p>
               <p>The outline of the video was written on a whiteboard the day of the shoot. The whole video was shot in one full day, and thanks to my friend Leo, editing took just one more.</p>
             </div>
             <div class="bom reveal" style="margin:0">
@@ -322,36 +322,36 @@ can_chapters = [
 {gallery([('images/can/electronics.jpg', 'Electronics on the bench'), ('images/can/electronics-inside.jpg', 'Electronics mounted inside the can'), ('images/can/code.jpg', 'Arduino code'), ('images/can/whiteboard.jpg', 'Video outline on the whiteboard'), ('images/can/video-shoot.jpg', 'Shooting the video')], P)}'''),
 ]
 build_project(PROJECTS[0], 'images/can/hero.jpg',
-    'A 43-inch tall, self-opening soda can — from idea to finished video in 20 days.',
+    'A 43-inch tall, self-opening soda can, taken from idea to finished video in 20 days.',
     [('43"', 'tall'), ('20', 'days'), ('9 V', 'single supply')], can_chapters,
     dict(img='images/can/final.jpg', alt='The finished Dr. Pepper can', title='Done in 20 days.',
-         text='Ideation, CAD, coding, wiring, fabrication, sourcing, assembly and cosmetics — one person, one deadline, one very large can.'),
+         text='Ideation, CAD, coding, wiring, fabrication, sourcing, assembly and cosmetics. One person, one deadline, one very large can.'),
     PROJECTS[1])
 
 # --- Recycler ----------------------------------------------------------------
 rec_chapters = [
-    chapter('why', 'The spark', 'Chapter 01 — The spark', '“Why not recycle it?”', f'''          <p class="text reveal">I was set on getting involved in every STEM opportunity I could find. I joined the clubs and went to the workshops, but none of them felt very impactful — so I decided to start a project of my own.</p>
-          <p class="text big reveal" style="margin-top:1.5rem">Then one day I was 3D printing the frame for a DC motor I was designing. The print failed — and the people running the workshop threw it straight in the trash.</p>
+    chapter('why', 'The spark', 'Chapter 01 · The spark', '“Why not recycle it?”', f'''          <p class="text reveal">I was set on getting involved in every STEM opportunity I could find. I joined the clubs and went to the workshops, but none of them felt very impactful, so I decided to start a project of my own.</p>
+          <p class="text big reveal" style="margin-top:1.5rem">Then one day I was 3D printing the frame for a DC motor I was designing. The print failed, and the people running the workshop threw it straight in the trash.</p>
           <div class="text reveal" style="margin-top:2rem">
-            <p>That's when the lightbulb went off. After some digging, I found out you can't just put failed prints in the recycling bin. So that became my project: build a machine that recycles failed 3D prints. It would build my skills and help the environment at the same time.</p>
-            <p>The catch: I was starting with <strong>zero practical engineering experience</strong>. It was a big thing to take on.</p>
+            <p>That's when the lightbulb went off. After some digging, I found out you can't just put failed prints in the recycling bin. So that became my project. I would build a machine that recycles failed 3D prints. It would build my skills and help the environment at the same time.</p>
+            <p>The catch was that I was starting with <strong>zero practical engineering experience</strong>, so it was a big thing to take on.</p>
           </div>'''),
-    chapter('concept', 'Early iterations', 'Chapter 02 — Starting from zero', 'Learning by designing.', f'''          <div class="text reveal">
-            <p>My first concept was modeled part by part — blades, spacers, walls and a base plate. Figuring out how to actually build it is what led me to the makerspace (STEMbassadors / IDEA Center), where I got heavily involved and picked up the skills I needed for this project and every one after it.</p>
+    chapter('concept', 'Early iterations', 'Chapter 02 · Starting from zero', 'Learning by designing.', f'''          <div class="text reveal">
+            <p>My first concept was modeled part by part, with blades, spacers, walls and a base plate. Figuring out how to actually build it is what led me to the makerspace (STEMbassadors / IDEA Center), where I got heavily involved and picked up the skills I needed for this project and every one after it.</p>
           </div>''' + '\n' +
         '          <p class="gallery-label mono reveal">First concept</p>\n' +
         gallery([('images/recycler/early-iso.jpg', 'Isometric view'), ('images/recycler/early-front.jpg', 'Front view'), ('images/recycler/early-top.jpg', 'Top view'), ('images/recycler/early-right.jpg', 'Right view')], P, 'cad') + '\n' +
         '          <p class="gallery-label mono reveal">Parts</p>\n' +
         gallery([('images/recycler/early-blade.jpg', 'Blade'), ('images/recycler/early-spacer.jpg', 'Spacer'), ('images/recycler/early-wall-quarter.jpg', '1/4" wall'), ('images/recycler/early-wall-five-eighths.jpg', '5/8" wall'), ('images/recycler/early-baseplate.jpg', 'Base plate')], P, 'cad')),
-    chapter('design', 'Final design', 'Chapter 03 — Final design', 'Every part, designed by me.', f'''          <div class="text reveal">
-            <p>I did all of the design work myself in SolidWorks: a motor driving the shredder through a chain and sprockets, with the whole machine mounted on a single base plate.</p>
+    chapter('design', 'Final design', 'Chapter 03 · Final design', 'Every part, designed by me.', f'''          <div class="text reveal">
+            <p>I did all of the design work myself in SolidWorks. A motor drives the shredder through a chain and sprockets, with the whole machine mounted on a single base plate.</p>
           </div>''' + '\n' +
-        gallery([('images/recycler/cad-full-assembly.jpg', 'Full final assembly: motor, chain drive and shredder')], P, 'cad') + '\n' +
+        gallery([('images/recycler/cad-full-assembly.jpg', 'Full final assembly with motor, chain drive and shredder')], P, 'cad') + '\n' +
         '          <p class="gallery-label mono reveal">Along the way</p>\n' +
         gallery([('images/recycler/cad-final.jpg', 'Shredder assembly'), ('images/recycler/cad-shredder.jpg', 'Shredder with motor')], P, 'cad')),
-    chapter('build', 'Making it', 'Chapter 04 — Making it', 'Make what you can. Outsource what you can\'t.', f'''          <div class="split">
+    chapter('build', 'Making it', 'Chapter 04 · Making it', 'Make what you can. Outsource what you can\'t.', f'''          <div class="split">
             <div class="text reveal">
-              <p>Most of the metalwork — cutting the sheet metal and welding the parts together — was outsourced, since I don't have metalworking equipment.</p>
+              <p>Most of the metalwork was outsourced, including cutting the sheet metal and welding the parts together, since I don't have metalworking equipment.</p>
               <p>The shims I cut myself on a <strong>fiber laser</strong>.</p>
             </div>
             <div class="bom reveal" style="margin:0;grid-template-columns:1fr 1fr">
@@ -367,27 +367,27 @@ rec_chapters = [
         gallery([('images/recycler/laser-cut.jpg', 'Cutting on the fiber laser'), ('images/recycler/spacer.jpg', 'Laser-cut shim'), ('images/recycler/keyed-part.jpg', 'Keyed shim'), ('images/recycler/cut-parts.jpg', 'Cut parts')], P) + '\n' +
         '          <p class="gallery-label mono reveal">Welding &amp; assembly</p>\n' +
         gallery([('images/recycler/welding.jpg', 'Welding'), ('images/recycler/plywood-base.jpg', 'Plywood base'), ('images/recycler/assembly-plate.jpg', 'Assembling the blade housing'), ('images/recycler/shredder-assembled.jpg', 'Shredder assembled'), ('images/recycler/shredder-built.jpg', 'Shredder with drive')], P)),
-    chapter('now', 'Where it is now', 'Chapter 05 — Where it is now', 'From one person to an organization.', f'''          <div class="split">
+    chapter('now', 'Where it is now', 'Chapter 05 · Where it is now', 'From one person to an organization.', f'''          <div class="split">
             <div class="text reveal">
-              <p>The recycler has mostly lived on the back burner, worked on in bursts whenever I had time. But it did something bigger than shred plastic: it led me to the makerspace and pushed me to grow the skills that made every other project possible.</p>
+              <p>The recycler has mostly lived on the back burner, worked on in bursts whenever I had time. But it did something bigger than shred plastic. It led me to the makerspace and pushed me to grow the skills that made every other project possible.</p>
               <p>Now that I'm at USC, I've handed the project off to <strong>STEMbassadors</strong>, the non-profit makerspace, so their space can become a beacon of recycling for the community. What started as just me is now part of an organization.</p>
             </div>
 {gallery([('images/recycler/extruder.jpg', 'The extrusion stage')], P)}
           </div>'''),
 ]
 build_project(PROJECTS[1], 'images/recycler/shredder-built.jpg',
-    'The project that started it all: a machine to recycle failed 3D prints, now carried on by the STEMbassadors makerspace.',
+    'The project that started it all. A machine to recycle failed 3D prints, now carried on by the STEMbassadors makerspace.',
     [('0', 'experience at the start'), ('100%', 'designed by me'), ('1', 'non-profit carrying it on')], rec_chapters,
     None, PROJECTS[2])
 
 # --- Turret ----------------------------------------------------------------
 tur_chapters = [
-    chapter('why', 'The idea', 'Chapter 01 — Coming up with the idea', 'The guide gave me a parts list. Nothing else.', f'''          <p class="text big reveal">I started from an online Nerf turret guide — but it was outdated, covered the bare minimum, and had no information on how to program it.</p>
-          <div class="text reveal" style="margin-top:2rem"><p>All it really provided was a materials list. Everything else — the mechanism, the wiring, the code and the app — I had to research and work out myself.</p></div>'''),
-    chapter('design', 'Design', 'Chapter 02 — Creation', 'Planned on paper, built in cardboard.', f'''          <div class="split">
+    chapter('why', 'The idea', 'Chapter 01 · Coming up with the idea', 'The guide gave me a parts list. Nothing else.', f'''          <p class="text big reveal">I started from an online Nerf turret guide, but it was outdated, covered the bare minimum, and had no information on how to program it.</p>
+          <div class="text reveal" style="margin-top:2rem"><p>All it really provided was a materials list. The mechanism, the wiring, the code and the app were all things I had to research and work out myself.</p></div>'''),
+    chapter('design', 'Design', 'Chapter 02 · Creation', 'Planned on paper, built in cardboard.', f'''          <div class="split">
             <div class="text reveal">
-              <p>Before building anything, I drew every part <strong>to scale</strong> so everything was planned out ahead of time — the base mount, the magazine, and the mounts for the DC motors, the continuous 360° servo and the 180° servo.</p>
-              <p>The prototype was built from cardboard, which kept it fast and cheap to iterate on — even if cardboard doesn't always come out as intended.</p>
+              <p>Before building anything, I drew every part <strong>to scale</strong> so everything was planned out ahead of time, including the base mount, the magazine, and the mounts for the DC motors, the continuous 360° servo and the 180° servo.</p>
+              <p>The prototype was built from cardboard, which kept it fast and cheap to iterate on, even if cardboard doesn't always come out as intended.</p>
             </div>
             <ol class="steps reveal">
               <li><div><b>Spin up</b>Two DC motors spin in opposite directions to act as flywheels.</div></li>
@@ -397,7 +397,7 @@ tur_chapters = [
           </div>
           <p class="gallery-label mono reveal">Plans &amp; first parts</p>
 {gallery([('images/turret/creation.jpg', 'To-scale drawings and the planned model'), ('images/turret/base.jpg', 'Base'), ('images/turret/mount.jpg', 'Mount'), ('images/turret/magazine.jpg', 'Magazine (before DC motors)'), ('images/turret/flywheels.jpg', 'Servo feeding a dart into the flywheels')], P)}'''),
-    chapter('problems', 'Problems & fixes', 'Chapter 03 — Problems', 'First version: it didn\'t work.', f'''          <div class="split">
+    chapter('problems', 'Problems & fixes', 'Chapter 03 · Problems', 'The first version didn\'t work.', f'''          <div class="split">
             <div class="reveal">
               <p class="mono" style="color:var(--accent-2);margin-bottom:1rem">What went wrong</p>
               <ol class="steps">
@@ -415,13 +415,13 @@ tur_chapters = [
             </div>
           </div>
 {gallery([('images/turret/problem-2.jpg', 'The blocked pusher'), ('images/turret/solution-1.jpg', 'New piece cut to the magazine arc'), ('images/turret/solution-2.jpg', 'Redesigned mount')], P)}'''),
-    chapter('wiring', 'Wiring', 'Chapter 04 — Put together', 'Wiring it up.', f'''          <div class="bom reveal">
-              <div><b>Servo motor</b><span>3 wires — two for the circuit, one for communication</span></div>
+    chapter('wiring', 'Wiring', 'Chapter 04 · Put together', 'Wiring it up.', f'''          <div class="bom reveal">
+              <div><b>Servo motor</b><span>3 wires, two for the circuit and one for communication</span></div>
               <div><b>DC motors</b><span>Power, speed and direction lines</span></div>
-              <div><b>Bluetooth module</b><span>5 wires — two for communication, two for the circuit</span></div>
+              <div><b>Bluetooth module</b><span>5 wires, two for communication and two for the circuit</span></div>
           </div>
 {gallery([('images/turret/wiring-diagram.jpg', 'Wiring diagram'), ('images/turret/wiring.jpg', 'Breadboard wiring'), ('images/turret/put-together.jpg', 'Put together'), ('images/turret/turret.jpg', 'Electronics mounted')], P)}'''),
-    chapter('app', 'The app', 'Chapter 05 — Programming the app', 'A phone app, built with blocks.', f'''          <div class="split">
+    chapter('app', 'The app', 'Chapter 05 · Programming the app', 'A phone app, built with blocks.', f'''          <div class="split">
             <div class="text reveal">
               <p>I built the controller app in <strong>MIT App Inventor</strong> using block code. It was easy to use, though getting the alignment and sizing right was a little difficult.</p>
             </div>
@@ -432,14 +432,14 @@ tur_chapters = [
             </ol>
           </div>
 {gallery([('images/turret/app-designer.jpg', 'The app in MIT App Inventor'), ('images/turret/app-blocks.jpg', 'Bluetooth block code')], P)}'''),
-    chapter('code', 'Arduino code', 'Chapter 06 — Programming the Arduino', 'Every movement at once.', f'''          <div class="text reveal">
+    chapter('code', 'Arduino code', 'Chapter 06 · Programming the Arduino', 'Every movement at once.', f'''          <div class="text reveal">
             <p>The Arduino side uses <strong>Servo.h</strong> for servo commands and <strong>SoftwareSerial.h</strong> to send bytes back and forth with the app. Pins and motor speeds are all set in variables at the top, so the whole program can be tuned from one place.</p>
-            <p>On startup it sets up every pin, opens serial communication and moves all the motors to their starting positions. In the loop, <code>Serial.available</code> checks for a link and <code>Serial.read</code> takes in commands. Each command flips a set of booleans, and because everything runs through independent <code>if</code> statements, the turret can make multiple movements simultaneously — stepping in 1° increments with microsecond delays.</p>
+            <p>On startup it sets up every pin, opens serial communication and moves all the motors to their starting positions. In the loop, <code>Serial.available</code> checks for a link and <code>Serial.read</code> takes in commands. Each command flips a set of booleans, and because everything runs through independent <code>if</code> statements, the turret can make multiple movements simultaneously, stepping in 1° increments with microsecond delays.</p>
           </div>'''),
-    chapter('learned', 'What I learned', 'Chapter 07 — Final thoughts', 'Difficulty 7/10. Fun 9/10.', f'''          <div class="split">
+    chapter('learned', 'What I learned', 'Chapter 07 · Final thoughts', 'Difficulty 7/10. Fun 9/10.', f'''          <div class="split">
             <div class="text reveal">
-              <p>The hardest part was the design — there are so many factors to keep in mind, all while working in cardboard. The research was tedious, and sometimes there was no answer to find, so I had to use my best judgement.</p>
-              <p>The whole process was fun, especially the small wins: getting a motor to work, finishing each part, and figuring out fixes within my limitations. The best part is when everything finally comes together — which is also the worst part, because then there's nothing left to work on.</p>
+              <p>The hardest part was the design because there are so many factors to keep in mind, all while working in cardboard. The research was tedious, and sometimes there was no answer to find, so I had to use my best judgement.</p>
+              <p>The whole process was fun, especially the small wins like getting a motor to work, finishing each part, and figuring out fixes within my limitations. The best part is when everything finally comes together, which is also the worst part, because then there's nothing left to work on.</p>
             </div>
             <ol class="steps reveal">
               <li><div><b>Circuits</b>Building circuits and working with DC and servo motors.</div></li>
@@ -450,7 +450,7 @@ tur_chapters = [
           </div>'''),
 ]
 build_project(PROJECTS[2], 'images/turret/turret.jpg',
-    'A Bluetooth Nerf turret controlled from a phone app — designed in cardboard, wired on an Arduino, and programmed from scratch.',
+    'A Bluetooth Nerf turret controlled from a phone app. Designed in cardboard, wired on an Arduino, and programmed from scratch.',
     [('7/10', 'difficulty'), ('9/10', 'fun'), ('BT', 'phone control')], tur_chapters,
     None, PROJECTS[0])
 

@@ -1,6 +1,6 @@
 # anthonymadrigal.com
 
-Personal engineering portfolio. Plain HTML/CSS/JS — no build step.
+Personal engineering portfolio. Plain HTML, CSS and JS with no build step.
 
 ```
 index.html                  Home page
@@ -27,5 +27,5 @@ GitHub Pages: Settings → Pages → Deploy from branch → `main` / root.
 
 ## Regenerating pages
 `tools/build.py` generates `index.html` and `projects/*.html` (needs Python + Pillow):
-`python3 tools/build.py`. Editing the HTML directly also works — but rerunning the
+`python3 tools/build.py`. Editing the HTML directly also works, but rerunning the
 script overwrites hand edits, so pick one approach.

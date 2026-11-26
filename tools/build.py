@@ -113,7 +113,7 @@ def build_home():
              ('evolvent-design', 'Evolvent Design', 'https://evolventdesign.com'),
              ('navfac-exwc', 'NAVFAC EXWC', 'https://exwc.navfac.navy.mil'),
              ('usc-arc', 'USC ARC', None),
-             ('terra-labs', 'Terra Labs', None),
+             ('terra-labs', 'Terra Labs', 'https://www.uscterralabs.com/'),
              ('usc', 'USC', 'https://www.usc.edu'),
              ('oxnard-college', 'Oxnard College', 'https://www.oxnardcollege.edu'),
              ('namru-sa', 'NAMRU San Antonio', None)]

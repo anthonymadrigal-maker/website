@@ -438,7 +438,12 @@ tur_chapters = [
             <p>The Arduino side uses <strong>Servo.h</strong> for servo commands and <strong>SoftwareSerial.h</strong> to send bytes back and forth with the app. Pins and motor speeds are all set in variables at the top, so the whole program can be tuned from one place.</p>
             <p>On startup it sets up every pin, opens serial communication and moves all the motors to their starting positions. In the loop, <code>Serial.available</code> checks for a link and <code>Serial.read</code> takes in commands. Each command flips a set of booleans, and because everything runs through independent <code>if</code> statements, the turret can make multiple movements simultaneously, stepping in 1° increments with microsecond delays.</p>
           </div>'''),
-    chapter('learned', 'What I learned', 'Chapter 07 · Final thoughts', 'Difficulty 7/10. Fun 9/10.', f'''          <div class="split">
+    chapter('demo', 'Demonstration', 'Chapter 07 · Demonstration', 'See it in action.', f'''          <div class="video reveal">
+            <video controls playsinline preload="none" poster="{P}images/turret/demo-poster.jpg">
+              <source src="{P}video/turret-demo.mp4" type="video/mp4">
+            </video>
+          </div>'''),
+    chapter('learned', 'What I learned', 'Chapter 08 · Final thoughts', 'Difficulty 7/10. Fun 9/10.', f'''          <div class="split">
             <div class="text reveal">
               <p>The hardest part was the design because there are so many factors to keep in mind, all while working in cardboard. The research was tedious, and sometimes there was no answer to find, so I had to use my best judgement.</p>
               <p>The whole process was fun, especially the small wins like getting a motor to work, finishing each part, and figuring out fixes within my limitations. The best part is when everything finally comes together, which is also the worst part, because then there's nothing left to work on.</p>

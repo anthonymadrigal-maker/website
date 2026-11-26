@@ -50,7 +50,8 @@
         <li><a href="#wiring"><small>04</small>Wiring</a></li>
         <li><a href="#app"><small>05</small>The app</a></li>
         <li><a href="#code"><small>06</small>Arduino code</a></li>
-        <li><a href="#learned"><small>07</small>What I learned</a></li>
+        <li><a href="#demo"><small>07</small>Demonstration</a></li>
+        <li><a href="#learned"><small>08</small>What I learned</a></li>
         </ol>
       </aside>
       <div>
@@ -150,8 +151,17 @@
             <p>On startup it sets up every pin, opens serial communication and moves all the motors to their starting positions. In the loop, <code>Serial.available</code> checks for a link and <code>Serial.read</code> takes in commands. Each command flips a set of booleans, and because everything runs through independent <code>if</code> statements, the turret can make multiple movements simultaneously, stepping in 1° increments with microsecond delays.</p>
           </div>
         </section>
+        <section class="chapter" id="demo">
+          <p class="eyebrow mono reveal">Chapter 07 · Demonstration</p>
+          <h2 class="reveal">See it in action.</h2>
+          <div class="video reveal">
+            <video controls playsinline preload="none" poster="../images/turret/demo-poster.jpg">
+              <source src="../video/turret-demo.mp4" type="video/mp4">
+            </video>
+          </div>
+        </section>
         <section class="chapter" id="learned">
-          <p class="eyebrow mono reveal">Chapter 07 · Final thoughts</p>
+          <p class="eyebrow mono reveal">Chapter 08 · Final thoughts</p>
           <h2 class="reveal">Difficulty 7/10. Fun 9/10.</h2>
           <div class="split">
             <div class="text reveal">

@@ -24,3 +24,8 @@ Phones get a stacked single-column layout.
 
 ## Hosting
 GitHub Pages: Settings → Pages → Deploy from branch → `main` / root.
+
+## Regenerating pages
+`tools/build.py` generates `index.html` and `projects/*.html` (needs Python + Pillow):
+`python3 tools/build.py`. Editing the HTML directly also works — but rerunning the
+script overwrites hand edits, so pick one approach.

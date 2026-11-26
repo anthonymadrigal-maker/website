@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>3D Print Filament Recycler — Anthony Madrigal</title>
-<meta name="description" content="In progress: a shredder and extruder for turning failed 3D prints back into usable filament.">
+<meta name="description" content="The project that started it all: a machine to recycle failed 3D prints, designed from scratch and now carried on by the STEMbassadors makerspace.">
 <meta property="og:title" content="3D Print Filament Recycler — Anthony Madrigal">
-<meta property="og:description" content="In progress: a shredder and extruder for turning failed 3D prints back into usable filament.">
+<meta property="og:description" content="The project that started it all: a machine to recycle failed 3D prints, designed from scratch and now carried on by the STEMbassadors makerspace.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316140f'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='800' font-size='28' text-anchor='middle' fill='%23f4f1ea'%3EAM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,8 +31,8 @@
       <div>
         <p class="crumbs mono reveal"><a href="../index.html#projects">← All projects</a></p>
         <h1 class="reveal">3D Print Filament Recycler</h1>
-        <p class="lede reveal">In progress: a shredder and extruder for turning failed 3D prints back into usable filament.</p>
-        <div class="stats reveal"><div><b>WIP</b><span>in progress</span></div><div><b>2</b><span>stages: shred + extrude</span></div><div><b>CAD</b><span>SolidWorks</span></div></div>
+        <p class="lede reveal">The project that started it all: a machine to recycle failed 3D prints, now carried on by the STEMbassadors makerspace.</p>
+        <div class="stats reveal"><div><b>0</b><span>experience at the start</span></div><div><b>100%</b><span>designed by me</span></div><div><b>1</b><span>non-profit carrying it on</span></div></div>
       </div>
       <div class="media reveal"><img src="../images/recycler/shredder-built.jpg" alt="3D Print Filament Recycler"></div>
     </div>
@@ -44,25 +44,31 @@
       <aside class="rail" aria-label="Chapters">
         <ol>
           <span class="progress" aria-hidden="true"></span>
-        <li><a href="#why"><small>01</small>The idea</a></li>
-        <li><a href="#concept"><small>02</small>Early concept</a></li>
+        <li><a href="#why"><small>01</small>The spark</a></li>
+        <li><a href="#concept"><small>02</small>Early iterations</a></li>
         <li><a href="#design"><small>03</small>Final design</a></li>
-        <li><a href="#parts"><small>04</small>Sourcing</a></li>
-        <li><a href="#build"><small>05</small>Fabrication</a></li>
-        <li><a href="#extruder"><small>06</small>Extrusion</a></li>
+        <li><a href="#build"><small>04</small>Making it</a></li>
+        <li><a href="#now"><small>05</small>Where it is now</a></li>
         </ol>
       </aside>
       <div>
         <section class="chapter" id="why">
-          <p class="eyebrow mono reveal">Chapter 01 — Why</p>
-          <h2 class="reveal">Failed prints shouldn't be trash.</h2>
-          <div class="todo reveal"><b>Write-up coming.</b> Why you started this project and what the full system should do — shred failed prints, then extrude them into new filament.</div>
+          <p class="eyebrow mono reveal">Chapter 01 — The spark</p>
+          <h2 class="reveal">“Why not recycle it?”</h2>
+          <p class="text reveal">I was set on getting involved in every STEM opportunity I could find. I joined the clubs and went to the workshops, but none of them felt very impactful — so I decided to start a project of my own.</p>
+          <p class="text big reveal" style="margin-top:1.5rem">Then one day I was 3D printing the frame for a DC motor I was designing. The print failed — and the people running the workshop threw it straight in the trash.</p>
+          <div class="text reveal" style="margin-top:2rem">
+            <p>That's when the lightbulb went off. After some digging, I found out you can't just put failed prints in the recycling bin. So that became my project: build a machine that recycles failed 3D prints. It would build my skills and help the environment at the same time.</p>
+            <p>The catch: I was starting with <strong>zero practical engineering experience</strong>. It was a big thing to take on.</p>
+          </div>
         </section>
         <section class="chapter" id="concept">
-          <p class="eyebrow mono reveal">Chapter 02 — Early iterations</p>
-          <h2 class="reveal">The first version, part by part.</h2>
-          <div class="todo reveal"><b>Write-up coming.</b> What the first concept looked like and what you changed.</div>
-          <p class="gallery-label mono reveal">Assembly</p>
+          <p class="eyebrow mono reveal">Chapter 02 — Starting from zero</p>
+          <h2 class="reveal">Learning by designing.</h2>
+          <div class="text reveal">
+            <p>My first concept was modeled part by part — blades, spacers, walls and a base plate. Figuring out how to actually build it is what led me to the makerspace (STEMbassadors / IDEA Center), where I got heavily involved and picked up the skills I needed for this project and every one after it.</p>
+          </div>
+          <p class="gallery-label mono reveal">First concept</p>
 <div class="gallery cad reveal">
   <figure style="--r:1.328"><img src="../images/recycler/early-iso.jpg" alt="Isometric view" loading="lazy" decoding="async"><figcaption>Isometric view</figcaption></figure>
   <figure style="--r:2.366"><img src="../images/recycler/early-front.jpg" alt="Front view" loading="lazy" decoding="async"><figcaption>Front view</figcaption></figure>
@@ -79,11 +85,13 @@
 </div>
         </section>
         <section class="chapter" id="design">
-          <p class="eyebrow mono reveal">Chapter 03 — Design</p>
-          <h2 class="reveal">The shredder in SolidWorks.</h2>
-          <div class="todo reveal"><b>Write-up coming.</b> Key design decisions — blade stack, drive, gearing, motor.</div>
+          <p class="eyebrow mono reveal">Chapter 03 — Final design</p>
+          <h2 class="reveal">Every part, designed by me.</h2>
+          <div class="text reveal">
+            <p>I did all of the design work myself in SolidWorks: a motor driving the shredder through a chain and sprockets, with the whole machine mounted on a single base plate.</p>
+          </div>
 <div class="gallery cad single reveal">
-  <figure style="--r:1.332"><img src="../images/recycler/cad-full-assembly.jpg" alt="Full final assembly — motor, chain drive and shredder" loading="lazy" decoding="async"><figcaption>Full final assembly — motor, chain drive and shredder</figcaption></figure>
+  <figure style="--r:1.332"><img src="../images/recycler/cad-full-assembly.jpg" alt="Full final assembly: motor, chain drive and shredder" loading="lazy" decoding="async"><figcaption>Full final assembly: motor, chain drive and shredder</figcaption></figure>
 </div>
           <p class="gallery-label mono reveal">Along the way</p>
 <div class="gallery cad reveal">
@@ -91,44 +99,55 @@
   <figure style="--r:1.55"><img src="../images/recycler/cad-shredder.jpg" alt="Shredder with motor" loading="lazy" decoding="async"><figcaption>Shredder with motor</figcaption></figure>
 </div>
         </section>
-        <section class="chapter" id="parts">
-          <p class="eyebrow mono reveal">Chapter 04 — Sourcing</p>
-          <h2 class="reveal">Parts arrive.</h2>
-          <div class="todo reveal"><b>Write-up coming.</b> What you bought vs. made, and why.</div>
+        <section class="chapter" id="build">
+          <p class="eyebrow mono reveal">Chapter 04 — Making it</p>
+          <h2 class="reveal">Make what you can. Outsource what you can't.</h2>
+          <div class="split">
+            <div class="text reveal">
+              <p>Most of the metalwork — cutting the sheet metal and welding the parts together — was outsourced, since I don't have metalworking equipment.</p>
+              <p>The shims I cut myself on a <strong>fiber laser</strong>.</p>
+            </div>
+            <div class="bom reveal" style="margin:0;grid-template-columns:1fr 1fr">
+              <div><b>Design</b><span>All me, in SolidWorks</span></div>
+              <div><b>Shims</b><span>Fiber laser, by me</span></div>
+              <div><b>Sheet metal</b><span>Outsourced cutting</span></div>
+              <div><b>Welding</b><span>Outsourced</span></div>
+            </div>
+          </div>
+          <p class="gallery-label mono reveal">Parts</p>
 <div class="gallery  reveal">
   <figure style="--r:0.75"><img src="../images/recycler/parts-blades.jpg" alt="Shredder blades" loading="lazy" decoding="async"><figcaption>Shredder blades</figcaption></figure>
   <figure style="--r:0.75"><img src="../images/recycler/parts-gears.jpg" alt="Gears and hardware" loading="lazy" decoding="async"><figcaption>Gears and hardware</figcaption></figure>
   <figure style="--r:0.75"><img src="../images/recycler/parts-bearings.jpg" alt="Bearings" loading="lazy" decoding="async"><figcaption>Bearings</figcaption></figure>
-  <figure style="--r:1.333"><img src="../images/recycler/workspace.jpg" alt="Workspace" loading="lazy" decoding="async"><figcaption>Workspace</figcaption></figure>
 </div>
-        </section>
-        <section class="chapter" id="build">
-          <p class="eyebrow mono reveal">Chapter 05 — Fabrication</p>
-          <h2 class="reveal">Cutting, welding, assembling.</h2>
-          <div class="todo reveal"><b>Write-up coming.</b> How each part was made and put together.</div>
-          <p class="gallery-label mono reveal">Cutting</p>
+          <p class="gallery-label mono reveal">Cutting shims</p>
 <div class="gallery  reveal">
-  <figure style="--r:0.75"><img src="../images/recycler/plywood-base.jpg" alt="Plywood base" loading="lazy" decoding="async"><figcaption>Plywood base</figcaption></figure>
-  <figure style="--r:0.75"><img src="../images/recycler/laser-cut.jpg" alt="Laser cutting" loading="lazy" decoding="async"><figcaption>Laser cutting</figcaption></figure>
+  <figure style="--r:0.75"><img src="../images/recycler/laser-cut.jpg" alt="Cutting on the fiber laser" loading="lazy" decoding="async"><figcaption>Cutting on the fiber laser</figcaption></figure>
+  <figure style="--r:0.75"><img src="../images/recycler/spacer.jpg" alt="Laser-cut shim" loading="lazy" decoding="async"><figcaption>Laser-cut shim</figcaption></figure>
+  <figure style="--r:0.75"><img src="../images/recycler/keyed-part.jpg" alt="Keyed shim" loading="lazy" decoding="async"><figcaption>Keyed shim</figcaption></figure>
   <figure style="--r:0.563"><img src="../images/recycler/cut-parts.jpg" alt="Cut parts" loading="lazy" decoding="async"><figcaption>Cut parts</figcaption></figure>
-  <figure style="--r:0.75"><img src="../images/recycler/spacer.jpg" alt="Spacer" loading="lazy" decoding="async"><figcaption>Spacer</figcaption></figure>
-  <figure style="--r:0.75"><img src="../images/recycler/keyed-part.jpg" alt="Keyed part" loading="lazy" decoding="async"><figcaption>Keyed part</figcaption></figure>
 </div>
           <p class="gallery-label mono reveal">Welding &amp; assembly</p>
 <div class="gallery  reveal">
   <figure style="--r:0.75"><img src="../images/recycler/welding.jpg" alt="Welding" loading="lazy" decoding="async"><figcaption>Welding</figcaption></figure>
+  <figure style="--r:0.75"><img src="../images/recycler/plywood-base.jpg" alt="Plywood base" loading="lazy" decoding="async"><figcaption>Plywood base</figcaption></figure>
   <figure style="--r:0.75"><img src="../images/recycler/assembly-plate.jpg" alt="Assembling the blade housing" loading="lazy" decoding="async"><figcaption>Assembling the blade housing</figcaption></figure>
   <figure style="--r:0.75"><img src="../images/recycler/shredder-assembled.jpg" alt="Shredder assembled" loading="lazy" decoding="async"><figcaption>Shredder assembled</figcaption></figure>
   <figure style="--r:0.562"><img src="../images/recycler/shredder-built.jpg" alt="Shredder with drive" loading="lazy" decoding="async"><figcaption>Shredder with drive</figcaption></figure>
 </div>
         </section>
-        <section class="chapter" id="extruder">
-          <p class="eyebrow mono reveal">Chapter 06 — Next stage</p>
-          <h2 class="reveal">From shreds to filament.</h2>
-          <div class="todo reveal"><b>Write-up coming.</b> The extruder and spooling setup, and where the project stands now.</div>
+        <section class="chapter" id="now">
+          <p class="eyebrow mono reveal">Chapter 05 — Where it is now</p>
+          <h2 class="reveal">From one person to an organization.</h2>
+          <div class="split">
+            <div class="text reveal">
+              <p>The recycler has mostly lived on the back burner, worked on in bursts whenever I had time. But it did something bigger than shred plastic: it led me to the makerspace and pushed me to grow the skills that made every other project possible.</p>
+              <p>Now that I'm at USC, I've handed the project off to <strong>STEMbassadors</strong>, the non-profit makerspace, so their space can become a beacon of recycling for the community. What started as just me is now part of an organization.</p>
+            </div>
 <div class="gallery  single reveal">
-  <figure style="--r:0.75"><img src="../images/recycler/extruder.jpg" alt="Extruder and spool" loading="lazy" decoding="async"><figcaption>Extruder and spool</figcaption></figure>
+  <figure style="--r:0.75"><img src="../images/recycler/extruder.jpg" alt="The extrusion stage" loading="lazy" decoding="async"><figcaption>The extrusion stage</figcaption></figure>
 </div>
+          </div>
         </section>
 
       </div>

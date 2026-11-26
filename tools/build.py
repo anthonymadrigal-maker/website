@@ -112,7 +112,7 @@ def build_home():
              ('idea-center', 'IDEA Center', 'https://www.ideacentervta.com/'),
              ('evolvent-design', 'Evolvent Design', 'https://evolventdesign.com'),
              ('navfac-exwc', 'NAVFAC EXWC', 'https://exwc.navfac.navy.mil'),
-             ('usc-arc', 'USC ARC', None),
+             ('usc-arc', 'USC ARC', 'https://www.usc-arc.com/'),
              ('terra-labs', 'Terra Labs', 'https://www.uscterralabs.com/'),
              ('usc', 'USC', 'https://www.usc.edu'),
              ('oxnard-college', 'Oxnard College', 'https://www.oxnardcollege.edu'),

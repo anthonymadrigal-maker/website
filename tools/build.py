@@ -107,7 +107,7 @@ def build_home():
         </div>
         <div class="thumb"><img src="{pr['cover']}" alt="{E(pr['title'])}" loading="lazy"></div>
       </a>''')
-    logos = [(None, 'Deepshard Inc.'), ('idea-center', 'IDEA Center'), ('evolvent-design', 'Evolvent Design'), ('navfac-exwc', 'NAVFAC EXWC'),
+    logos = [('deepshard', 'Deepshard Inc.'), ('idea-center', 'IDEA Center'), ('evolvent-design', 'Evolvent Design'), ('navfac-exwc', 'NAVFAC EXWC'),
              ('usc-arc', 'USC ARC'), ('terra-labs', 'Terra Labs'), ('usc', 'USC'),
              ('oxnard-college', 'Oxnard College'), ('namru-sa', 'NAMRU San Antonio')]
     # f=None means no logo file yet: show the name as a plain wordmark instead

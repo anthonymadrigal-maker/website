@@ -108,7 +108,7 @@ def build_home():
         <div class="thumb"><img src="{pr['cover']}" alt="{E(pr['title'])}" loading="lazy"></div>
       </a>''')
     # (logo file, name, website). Logos with a website open it in a new tab.
-    logos = [('deepshard', 'Deepshard Inc.', 'https://itsalltruffles.com'),
+    logos = [('deepshard', 'Deepshard Inc.', 'https://x.com/itsalltruffles'),
              ('idea-center', 'IDEA Center', None),
              ('evolvent-design', 'Evolvent Design', 'https://evolventdesign.com'),
              ('navfac-exwc', 'NAVFAC EXWC', 'https://exwc.navfac.navy.mil'),

@@ -336,8 +336,10 @@ rec_chapters = [
             <p>That's when the lightbulb went off. After some digging, I found out you can't just put failed prints in the recycling bin. So that became my project. I would build a machine that recycles failed 3D prints. It would build my skills and help the environment at the same time.</p>
             <p>The catch was that I was starting with <strong>zero practical engineering experience</strong>, so it was a big thing to take on.</p>
           </div>'''),
-    chapter('concept', 'Early iterations', 'Chapter 02 · Starting from zero', 'Learning by designing.', f'''          <div class="text reveal">
-            <p>My first concept was modeled part by part, with blades, spacers, walls and a base plate. Figuring out how to actually build it is what led me to the makerspace (STEMbassadors / IDEA Center), where I got heavily involved and picked up the skills I needed for this project and every one after it.</p>
+    chapter('concept', 'The makerspace', 'Chapter 02 · Finding the makerspace', 'I knew what I wanted to build. I didn\'t know how.', f'''          <div class="text reveal">
+            <p>My original plan was to start a non-profit for recycling. I knew what I wanted to do, but I didn't have a fully fleshed out plan or any of the skills to make it happen. That included CAD.</p>
+            <p>So while the project was still just an idea, I went looking for a place that could give me advice. That search led me to the makerspace (STEMbassadors / IDEA Center), where I got heavily involved and learned the skills I needed for this project and every one after it.</p>
+            <p>Once I learned CAD there, I modeled my first concept part by part, with blades, spacers, walls and a base plate.</p>
           </div>''' + '\n' +
         '          <p class="gallery-label mono reveal">First concept</p>\n' +
         gallery([('images/recycler/early-iso.jpg', 'Isometric view'), ('images/recycler/early-front.jpg', 'Front view'), ('images/recycler/early-top.jpg', 'Top view'), ('images/recycler/early-right.jpg', 'Right view')], P, 'cad') + '\n' +

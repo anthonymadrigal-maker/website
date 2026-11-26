@@ -116,7 +116,7 @@ def build_home():
              ('terra-labs', 'Terra Labs', 'https://www.uscterralabs.com/'),
              ('usc', 'USC', 'https://www.usc.edu'),
              ('oxnard-college', 'Oxnard College', 'https://www.oxnardcollege.edu'),
-             ('namru-sa', 'NAMRU San Antonio', None)]
+             ('namru-sa', 'NAMRU San Antonio', 'https://www.med.navy.mil/Navy-Medicine-Research-and-Development-Command/R-D-Commands/Naval-Medical-Research-Unit-San-Antonio/')]
     def logo_item(f, n, url):
         # Linked logos get empty alt text because the link's aria-label already names them
         alt = '' if url else f'{E(n)} logo'

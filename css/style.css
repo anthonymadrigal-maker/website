@@ -102,10 +102,15 @@ p { margin: 0 0 1em; }
 .home-hero .lede { font-size: 1.3rem; color: var(--ink-2); max-width: 32rem; margin: 2rem 0 2.5rem; }
 .home-hero .actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 .hero-stack { position: relative; aspect-ratio: 4 / 4.4; }
-.hero-stack figure { position: absolute; margin: 0; border-radius: 1rem; overflow: hidden; box-shadow: 0 1.5rem 3rem -1.5rem rgba(22,20,15,.45); }
+.hero-stack > a { position: absolute; display: block; border-radius: 1rem; overflow: hidden; box-shadow: 0 1.5rem 3rem -1.5rem rgba(22,20,15,.45); transition: transform .35s cubic-bezier(.2,.7,.2,1); }
+.hero-stack > a:hover { transform: translateY(-.35rem); }
+.hero-stack figure { position: relative; margin: 0; width: 100%; height: 100%; }
 .hero-stack img { width: 100%; height: 100%; object-fit: cover; }
-.hero-stack .a { inset: 0 22% 12% 0; }
-.hero-stack .b { width: 42%; aspect-ratio: 3/4; right: 0; bottom: 0; border: .4rem solid var(--paper); }
+.hero-stack .a { inset: 0 24% 8% 0; }
+.hero-stack .a img { object-position: 50% 35%; }
+/* The shredder render is a landscape CAD image on white, so show all of it */
+.hero-stack .b { width: 54%; aspect-ratio: 4/3; right: 0; bottom: 0; border: .4rem solid var(--paper); background: #fff; }
+.hero-stack .b img { object-fit: contain; padding: .5rem; }
 .hero-stack .tag {
   position: absolute; left: 1rem; bottom: 1rem; background: var(--paper); color: var(--ink);
   padding: .4rem .7rem; border-radius: .4rem;
@@ -398,4 +403,13 @@ p { margin: 0 0 1em; }
   /* On phones the hero is taller than the screen, so pin the cue to the bottom of the screen */
   .story-cue { position: fixed; bottom: 1.25rem; font-size: .95rem; white-space: nowrap; transition: opacity .3s, transform .3s, background .2s; }
   .story-cue.gone { opacity: 0; transform: translate(-50%, 1rem); pointer-events: none; }
+}
+
+/* Home hero labels sit at the top so the overlapping card never hides them */
+.hero-stack .a .tag { top: 1rem; bottom: auto; }
+.hero-stack .b img { padding: 2.6rem .6rem .6rem; }
+.hero-stack .b .tag { top: .6rem; left: .6rem; bottom: auto; }
+@media (max-width: 900px) {
+  .hero-stack .tag { font-size: .62rem; padding: .3rem .5rem; }
+  .hero-stack .b img { padding-top: 2rem; }
 }

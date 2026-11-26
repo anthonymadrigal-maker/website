@@ -144,8 +144,8 @@ def build_home():
         </div>
       </div>
       <div class="hero-stack reveal">
-        <figure class="a"><img src="images/home/workbench.jpg" alt="Workbench covered in wires, Arduino boards and tools"></figure>
-        <figure class="b"><img src="images/can/final.jpg" alt="The finished 43-inch Dr. Pepper can"><span class="tag mono">43" tall</span></figure>
+        <a class="a" href="projects/dr-pepper-can.html"><figure><img src="images/can/scale.jpg" alt="Anthony with the finished 43-inch Dr. Pepper can"><span class="tag mono">43" Dr. Pepper can</span></figure></a>
+        <a class="b" href="projects/filament-recycler.html"><figure><img src="images/recycler/cad-full-assembly.jpg" alt="SolidWorks render of the filament recycler's shredder"><span class="tag mono">Shredder CAD</span></figure></a>
       </div>
     </div>
     <div class="scroll-cue mono">Scroll</div>
